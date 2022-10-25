@@ -50,7 +50,7 @@ public class ClienteController {
 		oldCliente.setApellido(request.getApellido());
 		oldCliente.setEmail(request.getEmail());
 		
-		return clienteService.save(request);
+		return clienteService.save(oldCliente);
 	}
 	
 	@DeleteMapping("clientes/{id}")

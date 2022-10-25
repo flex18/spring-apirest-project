@@ -44,6 +44,6 @@ public class ProductoController {
 		Producto oldprod = prodService.findById(id);
 		oldprod.setNombre(request.getNombre());
 		oldprod.setPrecio(request.getPrecio());
-		return prodService.insert(request);
+		return prodService.insert(oldprod);
 	}
 }
