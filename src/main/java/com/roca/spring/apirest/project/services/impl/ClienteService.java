@@ -6,33 +6,33 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.roca.spring.apirest.project.models.entity.Cliente;
-import com.roca.spring.apirest.project.repository.IClienteDao;
-import com.roca.spring.apirest.project.services.inter.ICliente;
+import com.roca.spring.apirest.project.repository.ClienteRepository;
+import com.roca.spring.apirest.project.services.inter.ClienteInterface;
 
 @Service
-public class ClienteService implements ICliente{
+public class ClienteService implements ClienteInterface{
 	
 	@Autowired
-	private IClienteDao clienteDao;
+	private ClienteRepository clienteRepositroy;
 	
 	@Override
 	public List<Cliente> fndAll() {
-		return (List<Cliente>) clienteDao.findAll();
+		return (List<Cliente>) clienteRepositroy.findAll();
 	}
 
 	@Override
 	public Cliente save(Cliente cliente) {
-		return clienteDao.save(cliente);
+		return clienteRepositroy.save(cliente);
 	}
 
 	@Override
 	public Cliente findById(Long id) {
-		return clienteDao.findById(id).orElse(null);
+		return clienteRepositroy.findById(id).orElse(null);
 	}
 
 	@Override
 	public void delete(Long id) {
-		clienteDao.deleteById(id);
+		clienteRepositroy.deleteById(id);
 	}
 
 }

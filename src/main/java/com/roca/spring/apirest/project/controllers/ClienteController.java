@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.roca.spring.apirest.project.models.entity.Cliente;
-import com.roca.spring.apirest.project.services.inter.ICliente;
+import com.roca.spring.apirest.project.services.inter.ClienteInterface;
 
 @RestController
 @RequestMapping("/bodega")
@@ -24,7 +24,7 @@ import com.roca.spring.apirest.project.services.inter.ICliente;
 public class ClienteController {
 	
 	@Autowired
-	private ICliente clienteService;
+	private ClienteInterface clienteService;
 	
 	
 	@GetMapping("/clientes")

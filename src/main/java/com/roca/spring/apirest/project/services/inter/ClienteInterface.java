@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.roca.spring.apirest.project.models.entity.Cliente;
 
-public interface ICliente {
+public interface ClienteInterface {
 	
 	public List<Cliente> fndAll();
 	
