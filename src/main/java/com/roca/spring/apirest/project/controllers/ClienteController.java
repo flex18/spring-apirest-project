@@ -19,7 +19,7 @@ import com.roca.spring.apirest.project.services.inter.ClienteInterface;
 
 @RestController
 @RequestMapping("/bodega")
-@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PATCH,
+@CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
 	    RequestMethod.DELETE})
 public class ClienteController {
 	
