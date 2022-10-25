@@ -27,7 +27,7 @@ public class ProductoService implements ProductoInterface{
 
 	@Override
 	public Producto findById(Long id) {
-		return prodRepository.getById(id);
+		return prodRepository.findById(id).orElse(null);
 	}
 
 }
