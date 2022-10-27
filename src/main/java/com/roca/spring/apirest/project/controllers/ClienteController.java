@@ -3,6 +3,7 @@ package com.roca.spring.apirest.project.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,16 +33,19 @@ public class ClienteController {
 		return clienteService.fndAll();
 	}
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/clientes/{id}")
 	public Cliente showById(@PathVariable Long id) {
 		return clienteService.findById(id);
 	}
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@PostMapping("/clientes")
 	public Cliente create(@RequestBody Cliente cliente) {
 		return clienteService.save(cliente);
 	}
 
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@PutMapping("clientes/{id}")
 	public Cliente update(@RequestBody Cliente request, @PathVariable Long id){
 		Cliente oldCliente = clienteService.findById(id);
@@ -53,6 +57,7 @@ public class ClienteController {
 		return clienteService.save(oldCliente);
 	}
 	
+	@Secured("ROLE_ADMIN")
 	@DeleteMapping("clientes/{id}")
 	public void delete(@PathVariable Long id) {
 		clienteService.delete(id);

@@ -10,11 +10,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
-		// TODO Auto-generated method stub
 		http.authorizeRequests().antMatchers(HttpMethod.GET, "/bodega/clientes").permitAll()
+		/*.antMatchers(HttpMethod.GET, "/bodega/clientes/{id}").hasAnyRole("USER", "ADMIN")
+		.antMatchers(HttpMethod.POST, "/bodega/clientes").hasAnyRole("USER", "ADMIN")
+		.antMatchers("/bodega/clientes/**").hasAnyRole("USER", "ADMIN")*/
 		.anyRequest().authenticated();
 	}
 	
-	
+	//.antMatchers(HttpMethod.POST, "/bodega/clientes").hasRole("ADMIN")
 	
 }

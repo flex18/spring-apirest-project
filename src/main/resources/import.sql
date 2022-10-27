@@ -38,8 +38,8 @@ INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jacky', 'Carr
 
 INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jesus', 'Carranza', 'jesusc@gmail.com', '2020-03-26');
 
-INSERT INTO `usuarios` (username, password, enabled) VALUES ('edwin','$2a$10$m5MANtz0lEKP1zgw3nqcdugNQoVqlfdxqATLsLsNhRnAgVlvUqahK',1);
-INSERT INTO `usuarios` (username, password, enabled) VALUES ('admin','$2a$10$S6W5evieSHYlmuts4evwb.Lx7m5/esXbtX9zw1YhSEiy.QlGJK.Zm',1);
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('edwin','$2a$10$m5MANtz0lEKP1zgw3nqcdugNQoVqlfdxqATLsLsNhRnAgVlvUqahK',1,'edwin','mendoza','emendoza@gmail.com');
+INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('admin','$2a$10$S6W5evieSHYlmuts4evwb.Lx7m5/esXbtX9zw1YhSEiy.QlGJK.Zm',1,'victor','minchan','vminchan@gmail.com');
 
 
 INSERT INTO `roles` (nombre) VALUES ('ROLE_USER');
