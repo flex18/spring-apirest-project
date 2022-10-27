@@ -17,9 +17,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.roca.spring.apirest.project.models.entity.Usuario;
 import com.roca.spring.apirest.project.repository.UsuarioRespository;
+import com.roca.spring.apirest.project.services.inter.UsuarioInterface;
 
 @Service
-public class UsuarioService implements UserDetailsService{
+public class UsuarioService implements UsuarioInterface, UserDetailsService{
 	
 	private Logger log = LoggerFactory.getLogger(UsuarioService.class);
 	
@@ -41,6 +42,11 @@ public class UsuarioService implements UserDetailsService{
 				.peek(authority -> log.info("Role : "+ authority.getAuthority()))
 				.collect(Collectors.toList());
 		return new User(user.getUsername(), user.getPassword(), user.getEnabled(), true, true, true, authorities);
+	}
+
+	@Override
+	public Usuario findByUsername(String username) {
+		return userRepository.findByUsername(username);
 	}
 
 }
