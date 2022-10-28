@@ -36,12 +36,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         configuration.setAllowedMethods(Arrays.asList("GET","POST","PUT","DELETE","PATCH","OPTIONS"));
         configuration.setAllowCredentials(true);
         configuration.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
-        //configuration.setAllowedHeaders(Arrays.asList("*"));
+        
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
     
+    @Bean
     public FilterRegistrationBean<CorsFilter> corsFilter(){
     	FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(new CorsFilter(corsConfigurationSource()));
     	bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
