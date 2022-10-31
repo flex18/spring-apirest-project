@@ -1,42 +1,23 @@
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Joel', 'Flores', 'gerson.dlarosa@gmail.com', '2020-01-01');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Joel', 'Flores', 'gerson.dlarosa@gmail.com', '2022-10-01');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Atenas', 'Santana', 'atenas@gmail.com', '2020-01-02');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Atenas', 'Santana', 'atenas@gmail.com', '2022-10-02');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Obet', 'Cervantes', 'obet@gmail.com', '2020-01-03');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Obet', 'Cervantes', 'obet@gmail.com', '2022-10-03');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Victor', 'De la rosa', 'victor@gmail.com', '2020-01-04');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Victor', 'De la rosa', 'victor@gmail.com', '2022-10-04');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jonathan', 'Flores', 'jonathan@gmail.com', '2020-01-05');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jonathan', 'Flores', 'jonathan@gmail.com', '2022-10-05');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Ivan', 'De La Rosa', 'ivan@gmail.com', '2020-01-06');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Ivan', 'De La Rosa', 'ivan@gmail.com', '2022-10-06');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jose', 'Flores', 'jose@gmail.com', '2020-01-07');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jose', 'Flores', 'jose@gmail.com', '2022-10-07');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Erik', 'De La Rosa', 'erick@gmail.com', '2020-01-08');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Erik', 'De La Rosa', 'erick@gmail.com', '2022-10-08');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Camlo', 'Vigotes', 'vigotes@gmail.com', '2020-07-05');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Camlo', 'Vigotes', 'vigotes@gmail.com', '2022-10-05');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Miguel', 'Del Monte', 'delmonte@gmail.com', '2020-01-06');
+INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Miguel', 'Del Monte', 'delmonte@gmail.com', '2022-10-06');
 
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('July', 'Rios', 'julyr@gmail.com', '2020-04-07');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Frank', 'Segovia', 'segovia@gmail.com', '2020-03-08');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Yaritza', 'Castillo', 'ana@gmail.com', '2020-04-12');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Pancho', 'Cueva', 'cueva@gmail.com', '2020-03-20');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Vanesa', 'Collazos', 'collazos@gmail.com', '2020-04-10');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Gilvert', 'Gonsales', 'gonsales@gmail.com', '2020-03-11');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Omar', 'Lazo', 'lazo@gmail.com', '2020-04-17');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Chavelita', 'delazo', 'delazo@gmail.com', '2020-03-18');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jacky', 'Carranza', 'jacky@gmail.com', '2020-04-25');
-
-INSERT INTO clientes (nombre, apellido, email, create_at) VALUES ('Jesus', 'Carranza', 'jesusc@gmail.com', '2020-03-26');
 
 INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('edwin','$2a$10$m5MANtz0lEKP1zgw3nqcdugNQoVqlfdxqATLsLsNhRnAgVlvUqahK',1,'edwin','mendoza','emendoza@gmail.com');
 INSERT INTO `usuarios` (username, password, enabled, nombre, apellido, email) VALUES ('admin','$2a$10$S6W5evieSHYlmuts4evwb.Lx7m5/esXbtX9zw1YhSEiy.QlGJK.Zm',1,'victor','minchan','vminchan@gmail.com');
