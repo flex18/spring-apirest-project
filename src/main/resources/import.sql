@@ -32,23 +32,23 @@ INSERT INTO `usuarios_roles` (usuario_id, role_id) VALUES (2, 1);
 
 
 /*tabla productos */
-/**
-INSERT INTO productos (nombre, precio, create_at) VALUES('Panasonic Pantalla LCD', 2500, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Sony Camara Digital DSC-W320B', 1230, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Apple Ipod Shufffle', 5000, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Sony Notebook Z110', 3700, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Hewlett Packard Multifuncional F2280', 3300, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Bianchi Bicicleta Aro 26', 800, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Mica Comoda 5 Cajones', 300, NOW());
 
-INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Equipos de oficina', null, 1, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Atun', 4, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Leche', 5, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Aceite', 11, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Arroz', 3, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Azucar', 4, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Galleta Soda', 1, NOW());
+INSERT INTO productos (nombre, precio, create_at) VALUES('Frugos', 3, NOW());
+
+INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Abarrotes en general', null, 1, NOW());
 
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 1);
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2, 1, 4);
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 5);
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 7);
 
-INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura Bicicleta', 'Alguna nota importante!', 1, NOW());
+INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura productos', 'Alguna nota importante!', 1, NOW());
 INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3, 2, 6);
 
-**/
+

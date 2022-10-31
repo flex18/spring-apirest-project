@@ -12,6 +12,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
@@ -24,31 +26,44 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table(name = "clientes")
-public class Cliente implements Serializable{
+@Table(name = "facturas")
+public class Factura implements Serializable{
 	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nombre;
-	private String apellido;
-	private String email;
+	private String descripcion;
+	private String observacion;
 	
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.ALL)
-	private List<Factura> factura;
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Cliente cliente;
 	
-	public Cliente() {
-		this.factura = new ArrayList<>();
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "factura_id")
+	private List<ItemFactura> items;
+	
+	public Factura() {
+		items = new ArrayList<>();
 	}
 	
 	@PrePersist
 	public void prePersist() {
-		createAt = new Date();
+		this.createAt = new Date();
 	}
 	
-	private static final long serialVersionUID = 1L;
+	public Double getTotal() {
+		Double total = 0.00;
+		for (ItemFactura item : items) {
+			total += item.getImporte();
+		}
+		return total;
+	}
+	
+	private static final long serialVersionUID = 1L;	
+
 }
