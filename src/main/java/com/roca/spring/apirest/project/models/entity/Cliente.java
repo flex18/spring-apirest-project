@@ -18,6 +18,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,11 +40,12 @@ public class Cliente implements Serializable{
 	@Temporal(TemporalType.DATE)
 	private Date createAt;
 	
+	@JsonIgnoreProperties({"cliente", "hibernateLazyInitializer", "handler"})
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", cascade = CascadeType.ALL)
-	private List<Factura> factura;
+	private List<Factura> facturas;
 	
 	public Cliente() {
-		this.factura = new ArrayList<>();
+		this.facturas = new ArrayList<>();
 	}
 	
 	@PrePersist
