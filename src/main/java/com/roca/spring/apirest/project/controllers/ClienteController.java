@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.roca.spring.apirest.project.models.entity.Cliente;
 import com.roca.spring.apirest.project.services.inter.ClienteInterface;
 
-@RestController
-@RequestMapping("/bodega")
 @CrossOrigin(origins = "http://localhost:4200", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
 	    RequestMethod.DELETE})
+@RestController
+@RequestMapping("/bodega")
 public class ClienteController {
 	
 	@Autowired
@@ -33,7 +33,7 @@ public class ClienteController {
 		return clienteService.fndAll();
 	}
 	
-	@Secured({"ROLE_ADMIN", "ROLE_USER"})
+	//@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/clientes/{id}")
 	public Cliente showById(@PathVariable Long id) {
 		return clienteService.findById(id);
