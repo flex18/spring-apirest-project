@@ -17,7 +17,7 @@ public class ProductoService implements ProductoInterface{
 
 	@Override
 	public List<Producto> findAll() {
-		return prodRepository.findAll();
+		return (List<Producto>) prodRepository.findAll();
 	}
 
 	@Override

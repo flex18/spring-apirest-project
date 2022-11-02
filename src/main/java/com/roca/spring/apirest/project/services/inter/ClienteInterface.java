@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.roca.spring.apirest.project.models.entity.Cliente;
 import com.roca.spring.apirest.project.models.entity.Factura;
+import com.roca.spring.apirest.project.models.entity.Producto;
 
 public interface ClienteInterface {
 	
@@ -20,5 +21,7 @@ public interface ClienteInterface {
 	public Factura saveFactura(Factura factura);
 	
 	public void deleteFacturaById(Long id);
+	
+	public List<Producto> findProductoByNombre(String term);
 
 }

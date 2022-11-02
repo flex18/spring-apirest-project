@@ -7,8 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.roca.spring.apirest.project.models.entity.Cliente;
 import com.roca.spring.apirest.project.models.entity.Factura;
+import com.roca.spring.apirest.project.models.entity.Producto;
 import com.roca.spring.apirest.project.repository.ClienteRepository;
 import com.roca.spring.apirest.project.repository.FacturaRepository;
+import com.roca.spring.apirest.project.repository.ProductoRepository;
 import com.roca.spring.apirest.project.services.inter.ClienteInterface;
 
 @Service
@@ -19,6 +21,9 @@ public class ClienteService implements ClienteInterface{
 	
 	@Autowired
 	private FacturaRepository facturaRepository;
+	
+	@Autowired
+	private ProductoRepository productoRepository;
 	
 	@Override
 	public List<Cliente> fndAll() {
@@ -53,6 +58,11 @@ public class ClienteService implements ClienteInterface{
 	@Override
 	public void deleteFacturaById(Long id) {
 		facturaRepository.deleteById(id);		
+	}
+
+	@Override
+	public List<Producto> findProductoByNombre(String term) {
+		return productoRepository.findByNombreStartingWithIgnoreCase(term);
 	}
 
 }

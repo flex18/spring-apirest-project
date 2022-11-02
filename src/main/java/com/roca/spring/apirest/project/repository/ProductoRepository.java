@@ -1,9 +1,15 @@
 package com.roca.spring.apirest.project.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
 
 import com.roca.spring.apirest.project.models.entity.Producto;
 
-public interface ProductoRepository extends JpaRepository<Producto, Long>{
+public interface ProductoRepository extends CrudRepository<Producto, Long>{
+	
+	public List<Producto> findByNombreContainingIgnoreCase(String term);
+	
+	public List<Producto> findByNombreStartingWithIgnoreCase(String term);
 
 }
