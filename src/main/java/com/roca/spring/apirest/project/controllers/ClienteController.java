@@ -33,7 +33,7 @@ public class ClienteController {
 		return clienteService.fndAll();
 	}
 	
-	//@Secured({"ROLE_ADMIN", "ROLE_USER"})
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/clientes/{id}")
 	public Cliente showById(@PathVariable Long id) {
 		return clienteService.findById(id);

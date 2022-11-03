@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,22 +27,26 @@ public class FacturaController {
 	@Autowired
 	private ClienteInterface clienteService;
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/facturas/{id}")
 	public Factura showById(@PathVariable Long id) {
 		return clienteService.findFacturaById(id);
 	}
 	
+	@Secured({"ROLE_ADMIN"})
 	@DeleteMapping("/facturas/{id}")
 	public void deleteFactura(@PathVariable Long id) {
 		clienteService.deleteFacturaById(id);
 	}
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@GetMapping("/facturas/filtrar-productos/{term}")
 	@ResponseStatus(HttpStatus.OK)
 	public List<Producto> filtrarProducto(@PathVariable String term){
 		return clienteService.findProductoByNombre(term);
 	}
 	
+	@Secured({"ROLE_ADMIN", "ROLE_USER"})
 	@PostMapping("/facturas")
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public Factura createFactura(@RequestBody Factura request) {
