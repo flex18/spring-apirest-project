@@ -49,4 +49,14 @@ public class UsuarioService implements UsuarioInterface, UserDetailsService{
 		return userRepository.findByUsername(username);
 	}
 
+	@Override
+	public List<Usuario> findAllUsuarios() {
+		return (List<Usuario>) userRepository.findAll();
+	}
+
+	@Override
+	public Usuario saveUsuario(Usuario request) {
+		return userRepository.save(request);
+	}
+
 }
