@@ -27,6 +27,7 @@ public class Producto implements Serializable{
 	private Long id;
 	private String nombre;
 	private Double precio;
+	private Double stock;
 	
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)

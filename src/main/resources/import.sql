@@ -33,13 +33,13 @@ INSERT INTO `usuarios_roles` (usuario_id, role_id) VALUES (2, 1);
 
 /*tabla productos */
 
-INSERT INTO productos (nombre, precio, create_at) VALUES('Atun', 4, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Leche', 5, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Aceite', 11, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Arroz', 3, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Azucar', 4, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Galleta Soda', 1, NOW());
-INSERT INTO productos (nombre, precio, create_at) VALUES('Frugos', 3, NOW());
+INSERT INTO productos (nombre, precio, stock, create_at) VALUES('Atun', 4, 20, NOW());
+INSERT INTO productos (nombre, precio, stock, create_at) VALUES('Leche', 5, 15, NOW());
+INSERT INTO productos (nombre, precio, stock, create_at) VALUES('Aceite', 11, 30, NOW());
+INSERT INTO productos (nombre, precio, stock, create_at) VALUES('Arroz', 3, 40, NOW());
+INSERT INTO productos (nombre, precio, stock, stock, create_at) VALUES('Azucar', 4, 15, NOW());
+INSERT INTO productos (nombre, precio, stock, create_at) VALUES('Galleta Soda', 1, 5, NOW());
+INSERT INTO productos (nombre, precio, stock, create_at) VALUES('Frugos', 3, 9, NOW());
 
 INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Abarrotes en general', null, 1, NOW());
 
