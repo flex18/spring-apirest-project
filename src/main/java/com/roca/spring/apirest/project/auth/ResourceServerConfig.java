@@ -23,10 +23,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers(HttpMethod.GET, "/bodega/clientes").permitAll()
 		//.antMatchers("/bodega/clientes/{id}").permitAll()
-		//.antMatchers("/bodega/factura/**").permitAll()
-		/*.antMatchers(HttpMethod.GET, "/bodega/clientes/{id}").hasAnyRole("USER", "ADMIN")
-		.antMatchers(HttpMethod.POST, "/bodega/clientes").hasAnyRole("USER", "ADMIN")
-		.antMatchers("/bodega/clientes/**").hasAnyRole("USER", "ADMIN")*/
+		.antMatchers("/bodega/usuarios").permitAll()
+		.antMatchers(HttpMethod.POST, "/bodega/usuarios").permitAll()
 		.anyRequest().authenticated()
 		.and().cors().configurationSource(corsConfigurationSource());
 	}

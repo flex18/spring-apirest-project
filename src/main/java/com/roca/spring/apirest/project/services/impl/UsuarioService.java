@@ -59,4 +59,9 @@ public class UsuarioService implements UsuarioInterface, UserDetailsService{
 		return userRepository.save(request);
 	}
 
+	@Override
+	public Usuario findUserById(Long id) {
+		return userRepository.findById(id).orElse(null);
+	}
+
 }

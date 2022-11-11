@@ -11,4 +11,6 @@ public interface UsuarioInterface {
 	public List<Usuario> findAllUsuarios();
 	
 	public Usuario saveUsuario(Usuario request);
+	
+	public Usuario findUserById(Long id);
 }
