@@ -57,7 +57,7 @@ public class UsuarioController {
 		return userService.findUserById(id);
 	}
 	
-	@PutMapping("/usuario/{id}")	
+	@PutMapping("/usuarios/{id}")	
 	public Usuario updateUsuario(@RequestBody Usuario request, @PathVariable Long id) {
 		Usuario oldUser = userService.findUserById(id);
 		
