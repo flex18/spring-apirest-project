@@ -11,5 +11,7 @@ public interface ProductoInterface {
 	public Producto insert(Producto request);
 	
 	public Producto findById(Long id);
+	
+	public Producto update(Producto request);
 
 }
